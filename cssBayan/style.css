@@ -74,3 +74,26 @@ html, body {
     opacity: 1;
     transition: 2s;
 }
+
+@media all and (max-width: 1199px) {
+    html, body {
+        font-size: 1.0em;
+    }
+    #main {
+        width: 80%;
+    }
+    #main label .mem img {
+        width: 70%;
+    }
+}
+@media all and (max-width: 575px) {
+    html, body {
+        font-size: 0.85em;
+    }
+    #main {
+        width: 95%;
+    }
+    #main label .mem img {
+        width: 75%;
+    }
+}
