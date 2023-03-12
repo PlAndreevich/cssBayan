@@ -28,6 +28,49 @@ html, body {
     color: #007BFF;
     opacity: 0.5;
 }
+#main label .txt {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#main label .txt .ico {
+    opacity: 0;
+    transition: 1s;
+}
+#main:hover label .txt .ico {
+    opacity: 1;
+    transition: 1s;
+}
 
+#main label .mem {
+    height: 0;
+    text-align: center;
+}
+#main label .mem img {
+    padding-top: 0.5em;
+    height: 0;
+    opacity: 0;
+    transition: 2s;
+}
+#main label:hover .mem {
+    height: auto;
+}
+#main label:hover .mem img {
+    cursor: crosshair;
+    height: auto;
+    opacity: 1;
+    transition: 2s;
+}
 
-
+#main:hover input:checked + label .txt .ico {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+#main input:checked + label .mem {
+    height: auto;
+}
+#main input:checked + label .mem img {
+    height: auto;
+    opacity: 1;
+    transition: 2s;
+}
