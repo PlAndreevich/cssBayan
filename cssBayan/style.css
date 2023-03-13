@@ -11,10 +11,6 @@ html, body {
     padding: 0;
     width: 75%;
 }
-#main:hover label {
-    cursor: pointer;
-    color: #000;
-}
 #main input{
     display: none;
 }
@@ -35,14 +31,6 @@ html, body {
     display: flex;
     justify-content: space-between;
 }
-#main label .txt .ico {
-    opacity: 0;
-    transition: 1s;
-}
-#main:hover label .txt .ico {
-    opacity: 1;
-    transition: 1s;
-}
 #main label .mem {
     height: 0;
     text-align: center;
@@ -53,21 +41,8 @@ html, body {
     opacity: 0;
     transition: 2s;
 }
-#main label:hover .mem {
-    height: auto;
-}
-#main label:hover .mem img {
-    cursor: crosshair;
-    height: auto;
-    opacity: 1;
-    transition: 2s;
-}
 #main input:checked + label {
 	color: #000;
-}
-#main:hover input:checked + label .txt .ico {
-    opacity: 1;
-    transform: rotate(45deg);
 }
 #main input:checked + label .mem {
     height: auto;
@@ -76,6 +51,34 @@ html, body {
     height: auto;
     opacity: 1;
     transition: 2s;
+}
+#main input:checked + label .txt .ico {
+    transform: rotate(45deg);
+}
+@media (hover: hover) {
+    #main:hover label {
+        cursor: pointer;
+        color: #000;
+    }
+    #main label .txt .ico {
+        opacity: 0;
+        transition: 1s;
+    }
+    #main:hover label .txt .ico {
+        opacity: 1;
+        transition: 1s;
+    }
+    #main label:hover .mem {
+        height: auto;
+    }
+    #main label:hover .mem img {
+        height: auto;
+        opacity: 1;
+        transition: 2s;
+    }
+    #main input + label:hover .txt .ico {
+        transform: rotate(45deg);
+    }
 }
 @media all and (max-width: 1199px) {
     html, body {
